@@ -7,10 +7,7 @@ import 'category_tag.dart';
 import 'coffee_image.dart';
 import 'star_rating.dart';
 
-/// One card of the Grid Catalog (2 columns, childAspectRatio 0.72).
-///
-/// The image is wrapped in Expanded: it takes whatever height is left after
-/// the text block, so the card can never overflow its grid cell.
+
 class CoffeeGridCard extends StatelessWidget {
   final Coffee coffee;
   final VoidCallback onTap;

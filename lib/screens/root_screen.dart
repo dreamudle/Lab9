@@ -18,10 +18,8 @@ class RootScreen extends StatefulWidget {
 class _RootScreenState extends State<RootScreen> {
   int _currentIndex = 0;
 
-  // The catalog (global `coffees` list) is still local state of the Feed.
   void _refresh() => setState(() {});
 
-  /// Icon with a live counter badge (hidden when the count is 0).
   Widget _badged(IconData icon, int count) => Badge(
     isLabelVisible: count > 0,
     label: Text('$count'),
@@ -30,7 +28,6 @@ class _RootScreenState extends State<RootScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // Persistent counts on tabs: watch both providers.
     final favCount = context.watch<FavoritesProvider>().count;
     final cartCount = context.watch<CartProvider>().totalCount;
 

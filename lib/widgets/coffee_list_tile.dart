@@ -6,7 +6,6 @@ import '../providers/favorites_provider.dart';
 import 'category_tag.dart';
 import 'star_rating.dart';
 
-/// One row of the List Feed: avatar icon, title, category tag, stars, price.
 class CoffeeListTile extends StatelessWidget {
   final Coffee coffee;
   final VoidCallback onTap;
@@ -27,8 +26,6 @@ class CoffeeListTile extends StatelessWidget {
     );
 
     return Material(
-      // Opaque background: it hides the red "delete" layer of Dismissible
-      // until the row is actually swiped.
       color: Theme.of(context).colorScheme.surface,
       child: InkWell(
         onTap: onTap,
@@ -57,8 +54,6 @@ class CoffeeListTile extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 4),
-                    // Wrap (not Row): on narrow screens the stars simply
-                    // move to the next line instead of overflowing.
                     Wrap(
                       spacing: 8,
                       runSpacing: 4,
