@@ -13,7 +13,6 @@ class CoffeeGridCard extends StatelessWidget {
   final VoidCallback onTap;
   final VoidCallback onFavorite;
 
-  /// Corner radius shared with the red delete background of Dismissible.
   static const double radius = 12;
 
   const CoffeeGridCard({
@@ -25,7 +24,6 @@ class CoffeeGridCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Rebuilds this widget only when THIS coffee's favorite flag changes.
     final isFav = context.select<FavoritesProvider, bool>(
       (f) => f.isFavorite(coffee.id),
     );
